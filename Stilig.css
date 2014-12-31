@@ -1,3 +1,5 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
 @-moz-document domain("boards.4chan.org") {
 
 /**
@@ -980,7 +982,7 @@ a.quotelink {
   top: -216px !important;
   right: 0px !important;
   left: auto !important;
-  width: 300px !important;
+  width: 304px !important;
   background: #3d444e !important;
   box-shadow: none !important;
   z-index: 2 !important;
@@ -1035,7 +1037,7 @@ textarea.field {
 
 .field:hover,
 .field:focus {
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, .12) !important;
+  box-shadow: none !important;
 }
 
 input:-moz-placeholder,
@@ -1081,6 +1083,7 @@ textarea:-moz-placeholder {
 
 #file-n-submit {
   height: 20px !important;
+  margin-top: -1px !important;
   border-bottom: 1px solid #dedede !important;
   border-bottom-right-radius: 5px !important;
   border-bottom-left-radius: 5px !important;
@@ -1117,7 +1120,7 @@ textarea,
 select,
 textarea:not(:focus),
 .field:not(:focus) {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, .095) inset;
+  box-shadow: none;
   background: #fff !important;
 }
 
@@ -1155,7 +1158,7 @@ input[type="submit"] {
   -moz-border-left-colors: none !important;
   border-image: none !important;
   -moz-appearance: none !important;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, .095) inset;
+  box-shadow: none !important;
 }
 
 input[type="submit"] {
@@ -1181,32 +1184,8 @@ input[name="sub"] {
   min-height: 20px !important;
 }
 
-.captcha-img {
-  margin-top:0!important;
-  margin-bottom:-1px!important;
-  min-width:300px!important;
-  max-width:300px!important;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, .095) inset;
-  border:none!important;
-  border-left: 1px solid #dedede !important;
-  border-right: 1px solid #dedede !important;
-}
-
-.captcha-img > img {
-  margin-left:0px!important;
-  margin-top:5px!important;
-  visibility:visible!important;
-  min-width:298px!important;
-  max-width:298px!important;
-  border-bottom: transparent !important;
-}
-
-.captcha-input.field {
-  border-left: 1px solid #dedede !important;
-  border-right: 1px solid #dedede !important;
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, .095) inset;
-  margin-top:-1px!important;
-  margin-bottom:-1px!important;
+.captcha-counter {
+  display: none !important;
 }
 
 #replies > div {
@@ -1506,4 +1485,32 @@ textarea:focus {
   background: #fff !important;
 }
 
+}
+
+/**
+    Recaptcha
+*/
+
+@-moz-document regexp("https?://.*.(google.com/recaptcha/api2).*") {
+  
+*:not([class*="recaptcha-checkbox"]) {
+  color: #333333 !important; 
+  background: #fff !important;
+  border-color: #fff !important;
+  border-radius: 0 !important;
+}
+  
+.rc-anchor-center-container {
+	margin-left: 25% !important;
+}
+  
+.recaptcha-checkbox-border { 
+  background: #e5e5e5 !important; 
+}
+ 
+.rc-anchor-logo, 
+.rc-anchor-privacy { 
+  display: none !important; 
+}
+  
 }
