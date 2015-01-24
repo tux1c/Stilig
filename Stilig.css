@@ -458,6 +458,10 @@ div.navLinks.desktop {
   pointer-events: none!important;
 }
 
+.cataloglink a[href*="archive"] {
+  display: none !important;
+}
+  
 .settings-link {
   position: fixed !important;
   top: 8px !important;
