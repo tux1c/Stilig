@@ -374,13 +374,6 @@ div.navLinks.desktop {
   padding-bottom:3px!important;
 }
 
-/*.op::after {
-  content: "" !important;
-  display: table !important;
-  clear: both !important;
-}*/
-
-
 .watch-thread-link {
   position: relative !important;
   top: 5px !important;
@@ -945,6 +938,10 @@ a.quotelink {
   border-bottom: 1px solid #eceef0 !important;
   margin: -5px !important;
   padding: 5px !important;
+}
+
+.suboption-list > div:last-of-type {
+  background-color: #fff !important;
 }
 
 #fourchanx-settings.dialog {
