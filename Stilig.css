@@ -155,6 +155,7 @@ div.navLinks.desktop {
 
 #custom-board-list {
   display: inline !important;
+  white-space: normal !important;
 }
 
 #full-board-list a {
