@@ -6,25 +6,27 @@
     Main Layout
 */
 
+#absbot,
 .ad-plea,
-#thread-watcher .move > .close,
-#qr .close,
-#qr #autohide,
 .boardBanner > img,
 .boardTitle,
 .boardSubtitle,
 #copyright,
 .deleteform,
-.postingMode,
-.stylechanger,
-.postForm,
+div.center,
 .extButton,
 h1,
 hr,
-div.center,
 #hideBtn,
-#absbot,
-.hide-reply-button.stub a::before{
+.hide-reply-button.stub a::before,
+.postForm,
+.postingMode,
+.stylechanger,
+#thread-watcher .move > .close,
+.webm-title,
+#qr-file-button,
+#qr .close,
+#qr #autohide {
   display: none !important;
 }
 
@@ -1049,38 +1051,35 @@ textarea:-moz-placeholder {
 
 #qr-filename-container {
   border-bottom-left-radius:4px!important;
-  margin-bottom: 3px !important;
+  margin-bottom: 0px !important;
   border-left: 1px solid #dedede !important;
   overflow: hidden !important;
-  max-height: 19px !important;
+  max-height: 20px !important;
   min-width: 74.3% !important;
   max-width: 74.3% !important;
 }
 
 #qr.has-spoiler .has-file #qr-filename-container {
-  min-width: 68.3% !important;
-  max-width: 68.3% !important;
+  min-width: 74% !important;
+  max-width: 74% !important;
 }
 
 #qr-spoiler-label {
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, .095) inset;
-  border-top: 1px solid #ddd !important;
-  border-bottom: 1px solid #ddd !important;
   max-height: 18px !important;
   min-height: 18px !important;
   margin-top: 1px !important;
-  margin-left: -2px !important;
+  margin-left: -13.1px !important;
   background: white !important;
 }
 
 #qr-spoiler-label input {
-  top: -1px !important;
+  top: 2px !important;
 }
 
 #qr-filename {
-  min-width: 76% !important;
-  max-width: 76% !important;
-  text-overflow: clip !important;
+  min-width: 86.4% !important;
+  max-width: 86.4% !important;
+  text-overflow: ellipsis !important;
 }
 
 #file-n-submit {
@@ -1092,12 +1091,12 @@ textarea:-moz-placeholder {
 }
 
 #file-n-submit input {
-  width: 25.5% !important;
+  width: 25.9% !important;
 }
 
 #file-n-submit.has-file input {
-  margin-left: -2px !important;
-  width: 25.9% !important;
+  margin-left: -1.5px !important;
+  width: 26.4% !important;
 }
 
 #qr-filerm {
