@@ -220,6 +220,14 @@ div.navLinks.desktop {
   color:transparent!important;
 }
 
+.fixed:root:not(.centered-links) #full-board-list > .boardList {
+    display: inline;
+}
+
+.fixed:root:not(.centered-links) #header-bar {
+    white-space: normal;
+}
+
 #boardNavDesktopFoot,
 #boardNavDesktopFoot .current {
   display:inline!important;
