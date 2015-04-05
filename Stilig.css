@@ -1100,6 +1100,7 @@ textarea:-moz-placeholder {
 
 #file-n-submit input {
   width: 25.9% !important;
+  border-radius: 0px;
 }
 
 #file-n-submit.has-file input {
