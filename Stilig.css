@@ -465,7 +465,11 @@ div.navLinks.desktop {
 .cataloglink a[href*="archive"] {
   display: none !important;
 }
-  
+
+.gallery-link > .dialog.submenu {
+  top: -3px !important;
+}
+
 .settings-link {
   position: fixed !important;
   top: 8px !important;
