@@ -557,6 +557,10 @@ div.navLinks.desktop {
   padding-bottom:1px!important; 
 }
 
+#watched-threads .watcher-link {
+  margin-bottom: -2px !important;
+}
+
 #thread-watcher a {
   margin-left: -3px!important;
   width: 155px !important;
