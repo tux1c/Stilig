@@ -1107,6 +1107,7 @@ textarea:-moz-placeholder {
 }
 
 #file-n-submit input {
+  height: 99% !important;
   width: 25.9% !important;
   border-radius: 0px;
 }
