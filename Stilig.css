@@ -26,7 +26,9 @@ hr,
 .webm-title,
 #qr-file-button,
 #qr .close,
-#qr #autohide {
+#qr #autohide,
+.hide-thread-button,
+.hide-reply-button {
   display: none !important;
 }
 
@@ -348,6 +350,10 @@ div.navLinks.desktop {
 
 .inline.crosspost .postContainer.replyContainer{
   border: 1px solid #ccc !important;
+}
+
+.replyContainer {
+  padding-left: 0 !important;
 }
 
 .inline {
