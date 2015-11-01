@@ -289,6 +289,10 @@ div.navLinks.desktop {
   margin-top: 28px !important;
 }
 
+.file-oekaki {
+  margin-left: 1px !important;
+}
+
 .expanded-image,
 .threadOP {
   clear: none !important;
@@ -1122,9 +1126,11 @@ textarea:-moz-placeholder {
 }
 
 #file-n-submit input {
-  height: 99% !important;
+  margin-top: 0px !important;
+  height: 98% !important;
   width: 25.9% !important;
   border-radius: 0px;
+  z-index: 999 !important;
 }
 
 #file-n-submit.has-file input {
