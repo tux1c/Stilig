@@ -1,4 +1,4 @@
-![screenshot](https://raw.githubusercontent.com/RiDeag/Stilig/master/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/mudanaku/Stilig/master/screenshot.png)
 
  Important
 -----------
