@@ -56,41 +56,66 @@ body {
     Top and side bar
 */
 
-#board-list::before {
+.top-header:not(.autohide) #board-list::after,
+.top-header.autohide #board-list::after,
+#board-list::after {
   display: inline !important;
   content: "" !important;
   background: #3d444e !important;
-  position: fixed !important;
-  top: 0px !important;
-  left: 0px !important;
-  width: 100% !important;
+  background-size: cover !important;
+  position: absolute !important;
+  top: -69px !important;
+  left: -4px !important;
+  width: 2560px !important;
   height: 38px !important;
+  z-index: 3 !important;
 }
 
-#shortcuts::after {
+.top-header.autohide #board-list::before {
+	   width: 0px !important;
+}
+
+.top-header:not(.autohide) #board-list::before {
   content: "" !important;
   position: fixed !important;
   height: 100% !important;
   width: 166px !important;
   border-right: 1px solid #dedede !important;
-  top: 0px !important;
+  top: 38px !important;
   left: 0px !important;
   right: auto !important;
   bottom: auto !important;
   background: #fff !important;
-  z-index: -9999 !important;
+  z-index: 3 !important;
 }
 
-#board-list::after {
+.top-header.autohide #custom-board-list::before {
+  width: 0 !important; 
+  height: 0 !important;
+  content: "" !important;
+}
+
+.top-header:not(.autohide) #custom-board-list::before {
   text-align: center !important;
   content: "BOARDS" !important;
   width: 166px !important;
-  background: #f4f5f5 !important;
+  color: #a3a3a3 !important;
+  background: #f5f5f5 !important;
   font-size: 11pt !important;
   position: fixed !important;
-  padding: 4px 0 6px 0 !important;
+  padding: 5px 0 5px 0 !important;
   top: 38px !important;
   left: 0 !important;
+  z-index: 5 !important;
+}
+
+#custom-board-list {
+  display: inline !important;
+  white-space: normal !important;
+  position: relative !important;
+  top: -2px !important;
+  left: 5px !important;
+  z-index: 4 !important;
 }
 
 #header-bar {
@@ -125,16 +150,28 @@ body {
   transition: none !important;
 }
 
-#header-bar.autohide #board-list::after,
-#header-bar.autohide #board-list,
+#header-bar.autohide #board-list a,
 #header-bar.autohide #shortcuts::after,
-#header-bar.autohide .show-board-list-button,
 .autohide #thread-watcher.dialog,
 .autohide #thread-stats,
 .autohide #update-timer,
-.autohide #update-status.new
-.show-board-list-button {
+.autohide #update-status.new {
+  position: fixed !important;
   left: -500px !important;
+}
+
+.top-header.autohide .show-board-list-button {
+  display: none !important;
+}
+  
+.top-header:not(.autohide) .show-board-list-button {
+  display:inherit!important;
+  position:fixed!important;
+  top: 158px !important;
+  left:-39px!important;
+  z-index:499!important;
+  width: 246px !important;
+  padding: 0 !important;
 }
 
 #update-status.new {
@@ -149,73 +186,60 @@ body {
   margin-left: -167px !important;
 }
 
+#header-bar.autohide { 
+  position: fixed !important;
+  top: -10px !important;
+} 
+    
 #board-list {
   position: fixed !important;
+  left: 0px !important;
   top: 69px !important;
   height: 100% !important;
-  width: 158px !important;
+  width: 100px !important;
   text-align: left !important;
-}
-
-#custom-board-list {
-  display: inline !important;
-  white-space: normal !important;
 }
 
 #full-board-list a {
   white-space:normal!important;
   margin:0!important;
   margin-right:-50px!important;
+  display: inline !important;
+  font-weight: normal !important;
+  color: #aaa !important;
+  font-size: 12px !important;
 }
 
 #full-board-list {
   display:inline !important;
   visibility: hidden !important;
-  padding:5px 0 !important;
   position:fixed!important;
-  top:-50px!important;
-  left:180px!important;
-  width: 500px !important;
+  top:-100px!important;
+  left:175px!important;
+  width: 530px !important;
   text-align: center !important;
   background-color:#fff!important;
-  border:solid 5px #3d444e!important;
-  border-radius: 0 0 5px 5px!important;
+  border:solid 5px #fff!important;
+  border-radius: 5px!important;
   transition: all 0.5s ease;
   z-index: -10 !important;
+  font-size: 12pt !important;
+  padding-left: 11px !important;
+  padding-right: 1px !important;
+  padding-top: 12px !important;
+  padding-bottom: 17px !important;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.16), 0px 2px 10px 0px rgba(0, 0, 0, 0.12);
 }
 
 #full-board-list:not([Hidden]) {
   visibility: visible !important;
-  top: 35px !important;
+  top: 45px !important;
   bottom: auto !important;
   transition: all 0.5s ease;
 }
 
-#custom-board-list a[href="javascript:;"],
-#full-board-list a[href="javascript:;"] {
-  padding:0!important;
-  padding-right:5px!important;
-  padding-left:5px!important;
-}
-
-.hide-board-list-button {
-  display:inherit!important;
-  font-size:9pt!important;
-  position:fixed!important;
-  top: 43px !important;
-  left:110px!important;
-  z-index:500!important;
-  background:#f4f5f5!important;
-  width:10px!important;
-  padding:0!important;
-}
-
-.show-board-list-button {
-  display:inherit!important;
-  position:fixed!important;
-  top: 43px !important;
-  left:112px!important;
-  z-index:499!important;
+.hide-board-list-container {
+  display: none !important;
 }
 
 #full-board-list {
@@ -233,9 +257,9 @@ body {
 #boardNavDesktopFoot,
 #boardNavDesktopFoot .current {
   display:inline!important;
-  position:fixed!important;
+  position:absolute!important;
   font-size: 0 !important;
-  top:5000px!important;
+  top:0px!important;
 }
 
 #boardNavDesktopFoot .current::after {
@@ -254,7 +278,7 @@ body {
 }
 
 #board-list .current {
-  padding: 0 0 0 2px !important;
+  padding-right: 50px !important;
   border-bottom: none !important;
 }
 
